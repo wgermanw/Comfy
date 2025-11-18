@@ -7,7 +7,6 @@ venv/
 
 # Training artifacts we do not want to push
 checkpoint-final/
-ComfyUI/
 temp/
 output/
 input/
