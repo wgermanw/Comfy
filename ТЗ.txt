@@ -1,0 +1,9 @@
+Тот текст, который ты прислал, описывает ситуацию, когда всё падает именно из-за flash-attn: колёса flash-attention собраны под sm80/sm90, Comfy стартует с флагом --use-flash-attention, и как только CLIPTextEncodeFlux лезет в их CUDA-ядро, вываливается no kernel image is available. Тогда действительно можно удалить flash-attn, Comfy переключается на обычное pytorch-внимание, и на тех же 30х80 всё живёт.
+
+У тебя картинка другая. Comfy при запуске сам пишет:
+
+NVIDIA GeForce RTX 5060 Ti with CUDA capability sm_120 is not compatible with the current PyTorch installation. The current PyTorch install supports CUDA capabilities sm_50 ... sm_90.
+
+и чуть ниже:
+
+Using pytorch attention

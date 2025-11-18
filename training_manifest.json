@@ -1,0 +1,33 @@
+{
+  "training_date": "2025-11-17T03:37:21.257299",
+  "backend": "flux",
+  "dataset_dir": "data/datasets/Mikassa",
+  "config": {
+    "resolution": 768,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "target_modules": [
+      "to_q",
+      "to_k",
+      "to_v",
+      "to_out.0"
+    ],
+    "text_encoder_target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "learning_rate": "5e-5",
+    "max_steps": 4000,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 4,
+    "mixed_precision": "bf16",
+    "gradient_checkpointing": true,
+    "save_steps": 500,
+    "eval_steps": 500,
+    "logging_steps": 50
+  }
+}

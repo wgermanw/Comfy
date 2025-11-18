@@ -1,0 +1,21 @@
+# Local python/OS clutter
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+
+# Training artifacts we do not want to push
+checkpoint-final/
+ComfyUI/
+temp/
+output/
+input/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# VS/IDE folders
+.idea/
+.vscode/
